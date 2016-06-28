@@ -22,9 +22,9 @@ ENV CATALINA_OPTS "-agentlib:jdwp=transport=dt_socket,address=8787,server=y,susp
 RUN yum update -y && \
   yum install -y curl && \
   yum install -y java-$JAVA_VERSON-openjdk java-$JAVA_VERSON-openjdk-devel && \
-  yum install telnet && \
-  yum install netstat && \
-  yum install nmap && \
+  yum install -y telnet && \
+  yum install -y netstat && \
+  yum install -y nmap && \
   yum clean all
 
 RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
