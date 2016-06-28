@@ -6,6 +6,7 @@
 FROM openshift/base-centos7
 
 EXPOSE 8080
+EXPOSE 8787
 
 ENV JAVA_VERSON 1.8.0
 ENV MAVEN_VERSION 3.3.9
@@ -13,6 +14,7 @@ ENV MAVEN_VERSION 3.3.9
 LABEL io.k8s.description="Platform for building and running Spring Boot applications" \
       io.k8s.display-name="Spring Boot Maven 3" \
       io.openshift.expose-services="8080:http" \
+      io.openshift.expose-services="8787:http" \
       io.openshift.tags="builder,java,java8,maven,maven3,springboot"
 
 ENV CATALINA_OPTS "-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n"
