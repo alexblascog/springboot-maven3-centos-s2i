@@ -15,7 +15,7 @@ LABEL io.k8s.description="Platform for building and running Spring Boot applicat
       io.openshift.expose-services="8080:http" \
       io.openshift.tags="builder,java,java8,maven,maven3,springboot"
 
-ENV CATALINA_OPTS "-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n %CATALINA_OPTS%"
+ENV CATALINA_OPTS "-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n"
 
 RUN yum update -y && \
   yum install -y curl && \
