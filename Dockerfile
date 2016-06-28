@@ -25,7 +25,6 @@ RUN yum update -y && \
   yum install telnet && \
   yum install netstat && \
   yum install nmap && \
-  yum install sudo && \
   yum clean all
 
 RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
