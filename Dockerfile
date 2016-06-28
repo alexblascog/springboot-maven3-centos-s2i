@@ -23,8 +23,8 @@ RUN yum update -y && \
   yum install -y curl && \
   yum install -y java-$JAVA_VERSON-openjdk java-$JAVA_VERSON-openjdk-devel && \
   yum install -y telnet && \
-  yum install -y netstat && \
   yum install -y nmap && \
+  yum install -y sudo && \
   yum clean all
 
 RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
